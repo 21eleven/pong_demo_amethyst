@@ -1,14 +1,12 @@
-extern crate amethyst;
-
+mod pong;
 use amethyst::prelude::*;
 use amethyst::renderer::{DisplayConfig, DrawFlat2D, Event, Pipeline,
                          RenderBundle, Stage, VirtualKeyCode};
 
 
 fn main() -> amethyst::Result<()> {
-    mod pong;
 
-    use crate::pong::Pong;
+    use pong::Pong;
 
     amethyst::start_logger(Default::default());
     use amethyst::utils::application_root_dir;
