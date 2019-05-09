@@ -4,13 +4,12 @@ use amethyst::prelude::*;
 use amethyst::renderer::{DisplayConfig, DrawFlat2D, Event, Pipeline,
                          RenderBundle, Stage, VirtualKeyCode};
 
-pub struct Pong;
-
-impl SimpleState for Pong {
-
-}
 
 fn main() -> amethyst::Result<()> {
+    mod pong;
+
+    use crate::pong::Pong;
+
     amethyst::start_logger(Default::default());
     use amethyst::utils::application_root_dir;
     let app_root = application_root_dir();
